@@ -48,7 +48,8 @@ ENV RAILS_ENV='development'
 ENV NODE_ENV='development'
 
 # Adding gems
-COPY Gemfile Gemfile
-COPY Gemfile.lock Gemfile.lock
+# COPY Gemfile Gemfile
+# COPY Gemfile.lock Gemfile.lock
+COPY . .
 
 RUN bundle install && yarn install --check-files
