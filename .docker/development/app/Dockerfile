@@ -52,3 +52,5 @@ COPY Gemfile Gemfile
 COPY Gemfile.lock Gemfile.lock
 
 RUN bundle install && yarn install --check-files
+
+COPY . .
