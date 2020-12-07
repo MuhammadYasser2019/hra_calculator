@@ -28,12 +28,7 @@ services:
     secrets:
       - master_key
       - credentials
-    command: bash -c "rm -f tmp/pids/server.pid &&
-                      mkdir -p tmp/pids/ &&
-                      cat /run/secrets/master_key > /app/config/master.key &&
-                      cat /run/secrets/credentials > /app/config/credentials.yml.enc &&
-                      bundle &&
-                      bundle exec puma -C config/puma.rb"
+    command: bash -c "sleep infinity"
     ports:
       - 3000
     depends_on:
